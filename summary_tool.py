@@ -3,8 +3,6 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
 
-
-@tool
 def summarize_paper(pdf_path: str) -> str:
     """
     Summarizes the paper text.
