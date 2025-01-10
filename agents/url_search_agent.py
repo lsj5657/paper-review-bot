@@ -29,8 +29,11 @@ def initialize_url_search_agent():
     template = """
     You are provided with the {title} of a research paper. Your task is to find and provide the URL of the paper.
 
-    To accomplish this, you can use the tools available to you. If necessary, explain your thought process as follows:
+    Please use the tools available to you to find the URL of the paper.
+
+    If you are unable to find the URL, return the string 'URL not found'.
     """
+    
     prompt_template = PromptTemplate(
         template=template,
         input_variables=["title"]
